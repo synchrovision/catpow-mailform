@@ -1,0 +1,302 @@
+@charset "utf-8";
+.cmf-contents {
+  margin: 50px 10px;
+}
+.cmf-heading {
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+  word-break: keep-all;
+}
+.cmf-heading::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 100px;
+  height: 1px;
+  background-color: #646464;
+}
+.cmf-text {
+  margin: 40px 20px;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 2em;
+}
+.cmf-text.center {
+  text-align: center;
+}
+.cmf-input {
+  position: relative;
+}
+.cmf-input input:not([type="radio"], [type="checkbox"]) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b2b2b2;
+  font-size: 16px;
+}
+.cmf-input textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.cmf-input select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: max-content;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b2b2b2;
+  text-align: center;
+  font-size: 16px;
+}
+.cmf-input__alert {
+  display: block;
+  position: absolute;
+  width: max-content;
+  top: -2.5em;
+  left: 0px;
+  right: 0px;
+  padding: 0.5em;
+  margin: auto;
+  background-color: #00377e;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1em;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 1;
+  transform: -webkit- translateY(0px);
+  transform: translateY(0px);
+  pointer-events: none;
+}
+.cmf-input__alert::after {
+  content: '';
+  display: block;
+  width: 0px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  border-style: solid;
+  border-width: 8px;
+  border-color: transparent;
+  border-top-color: #00377e;
+}
+.cmf-input:not(.is-error) .cmf-input__alert {
+  opacity: 0;
+  transform: -webkit- translateY(0.5em);
+  transform: translateY(0.5em);
+}
+.cmf-checkbox__item {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  margin: 5px;
+}
+.cmf-checkbox__item__input {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+.cmf-label {
+  cursor: pointer;
+}
+.cmf-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+}
+.cmf-table > tbody > tr.required > td::before, .cmf-table > tbody > tr.optional > td::before {
+  display: block;
+  position: absolute;
+  padding: 10px;
+  height: min-content;
+  top: 0px;
+  bottom: 0px;
+  left: 20px;
+  margin: auto;
+  font-size: 12px;
+  color: #ffffff;
+}
+.cmf-table > tbody > tr.required > td::before {
+  content: '必須';
+  background-color: #7e0000;
+}
+.cmf-table > tbody > tr.optional > td::before {
+  content: '任意';
+  background-color: #FFCD31;
+}
+.cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00377e;
+}
+.cmf-table > tbody > tr > th {
+  position: relative;
+  width: 275px;
+  font-size: 20px;
+  background-color: #00377e;
+  color: #ffffff;
+}
+.cmf-table > tbody > tr > td {
+  position: relative;
+  padding-left: 90px;
+  font-size: 17px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #00377e;
+}
+@media (max-width:959px) {
+  .cmf-table {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody > tr {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+  .cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .cmf-table > tbody > tr > td {
+    padding-left: 90px;
+  }
+}
+@media (min-width:960px) {
+  .cmf-table > tbody > tr:not(:last-child) > th {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #ffffff;
+  }
+}
+.cmf-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 10px;
+  list-style: none;
+}
+.cmf-buttons > .item {
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 350px;
+  padding: 10px;
+}
+.cmf-button {
+  display: block;
+  padding: 10px;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00377e;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #00377e;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.cmf-button.primary {
+  background-color: #00377e;
+  color: #ffffff;
+}
+.cmf-button.disabled {
+  opacity: 0.5;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  cursor: nd;
+}
+.cmf-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px;
+}
+.cmf-flex__item {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  padding: 10px;
+}
+.cmf-annotation {
+  display: block;
+  position: relative;
+  padding: 5px;
+  padding-left: 2em;
+  font-size: 15px;
+}
+.cmf-annotation::before {
+  content: '※';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.cmf-caption {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+}
+.cmf-agreement {
+  display: block;
+  padding: 10px 30px;
+  margin: 10px auto;
+  width: max-content;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=./theme-standard.css.map */

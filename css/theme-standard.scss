@@ -1,0 +1,187 @@
+@import 'config.scss';
+
+.cmf{
+	&-contents{
+		@include bnd((mg:50 10));
+	}
+	&-heading{
+		@include bnd((d:b,p:r,mgb:40,pdb:20));
+		@include txt((a:c,p:32,b:k));
+		&::after{
+			content:'';
+			@include bnd((d:b,p:a,b:0,l:0,r:0,mg:a,w:100,h:1));
+			@include bg((c:t));
+		}
+	}
+	&-text{
+		@include bnd((mg:40 20));
+		@include txt((a:j,p:16,h:2em));
+		&.center{
+			@include txt((a:c));
+		}
+	}
+	&-input{
+		@include bnd((p:r));
+		input:not([type="radio"],[type="checkbox"]){
+			@include bnd((d:b,w:f,pd:10,bs:b));
+			@include bdr((s:s,w:1,c:t 50));
+			@include txt((p:16));
+		}
+		textarea{
+			@include bnd((d:b,w:f,pd:10,bs:b));
+			@include txt((p:16));
+		}
+		select{
+			@include bnd((d:b,ap:n,w:max,pd:10));
+			@include bdr((s:s,w:1,c:t 50));
+			@include txt((a:c,p:16));
+		}
+		&__alert{
+			@include bnd((d:b,p:a,w:max,t:-2.5em,l:0,r:0,pd:.5em,mg:a));
+			@include bg((c:m));
+			@include bdr((r:3));
+			@include txt((p:16,h:1em,c:b));
+			@include shd((b:1));
+			@include trn((t:.2s,o:1,y:0));
+			@include usr((e:n));
+			&::after{
+				content:'';
+				@include bnd((d:b,w:0,p:a,t:f,l:0,r:0,mg:a));
+				@include bdr((s:s,w:8,c:n));
+				@include bdr((p:t,c:m));
+			}
+		}
+		&:not(.is-error) &__alert{
+			@include trn((o:0,y:.5em));
+		}
+	}
+	&-checkbox{
+		&__item{
+			@include bnd((d:ib,p:r,pd:10,pdl:30,mg:5));
+			&__input{
+				@include bnd((p:a,t:15,l:5));
+			}
+		}
+	}
+	&-label{
+		@include usr((c:p));
+	}
+	&-table{
+		@include tbl(());
+		@include bnd((w:f));
+		>tbody{
+			>tr{
+				&.required,&.optional{
+					>td::before{
+						@include bnd((d:b,p:a,pd:10,h:min,t:0,b:0,l:20,mg:a));
+						@include txt((p:12,c:b));;
+					}
+				}
+				&.required{
+					>td::before{
+						content:'必須';
+						@include bg((c:1));
+					}
+				}
+				&.optional{
+					>td::before{
+						content:'任意';
+						@include bg((c:#FFCD31));
+					}
+				}
+				>th,>td{
+					@include bnd((pd:20));
+					@include bdr((s:s,w:2,c:m));
+				}
+				>th{
+					@include bnd((p:r,w:275));
+					@include txt((p:20));
+					@include bg((c:m));
+					@include txt((c:b));
+				}
+				>td{
+					@include bnd((p:r,pdl:90));
+					@include txt((p:17));
+					@include bdr((p:r,s:s,w:2,c:m));
+				}
+			}
+		}
+		@include bp(-2){
+			@include bnd((ap:n,d:b));
+			>tbody{
+				@include bnd((ap:n,d:b));
+				>tr{
+					@include bnd((ap:n,d:b));
+					>th,>td{
+						@include bnd((ap:n,d:b,w:f,pd:20,bs:b));
+					}
+					>td{
+						@include bnd((pdl:90));
+					}
+				}
+			}
+		}
+		@include bp(2){
+			>tbody{
+				>tr{
+					&:not(:last-child){
+						>th{
+							@include bdr((p:b,s:s,w:2,c:b));
+						}
+					}
+				}
+			}
+		}
+	}
+	&-buttons{
+		@include flx((w:w,j:c));
+		@include bnd((mg:50 a,pd:10));
+		@include txt((l:n));
+		>.item{
+			@include bnd((f:0 0 350,pd:10));
+		}
+	}
+	&-button{
+		@include bnd((d:b,pd:10,w:f 350,bs:b));
+		@include bg((c:b));
+		@include bdr((s:s,w:2,c:m,r:50));
+		@include txt((a:c,p:24,c:m));
+		@include usr((c:p));
+		@include trn((t:.2s));
+		&.primary{
+			@include bg((c:m));
+			@include txt((c:b));
+		}
+		&.secondary{
+			
+		}
+		&.disabled{
+			@include trn((o:.5,gry:80%));
+			@include usr((c:nd));
+		}
+	}
+	&-flex{
+		@include flx((w:w,a:c));
+		@include bnd((pd:10));
+		&__item{
+			@include bnd((f:1 1 400,pd:10));
+		}
+	}
+	&-annotation{
+		@include bnd((d:b,p:r,pd:5,pdl:2em));
+		@include txt((p:15));
+		&::before{
+			content:'※';
+			@include bnd((d:b,p:a,t:5,l:5));
+		}
+	}
+	&-caption{
+		@include bnd((d:b,pd:5));
+		@include txt((p:16));
+	}
+	&-agreement{
+		@include bnd((d:b,pd:10 30,mg:10 a,w:max));
+		@include txt((p:16));
+		@include usr((c:p));
+	}
+}

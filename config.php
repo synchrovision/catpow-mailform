@@ -1,0 +1,20 @@
+<?php
+$config=array(
+	'user'=>'user',
+	'password'=>'password',
+	'smtp'=>false,
+	'defaultHeaders'=>array(
+		'from'=>'Example<noreply@example.com>',
+		'to'=>'Example<noreply@example.com>',
+		'subject'=>'Mail Send from MailForm'
+	),
+	'log'=>true,
+	'inputs'=>array(
+		'name'=>array('type'=>'text','label'=>'お名前','required'=>true),
+		'email'=>array('type'=>'email','label'=>'メールアドレス','size'=>30,'required'=>true),
+		'zipcode'=>array('type'=>'ZipCode','label'=>'郵便番号','pref'=>'prefecture','addr'=>'address'),
+		'prefecture'=>array('type'=>'text','label'=>'都道府県'),
+		'address'=>array('type'=>'text','label'=>'住所'),
+		'body'=>array('type'=>'textarea','label'=>'お問合せ内容','required'=>true),
+	)
+);
