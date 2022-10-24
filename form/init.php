@@ -14,6 +14,6 @@ $res['uri']='/index.html';
 		</tbody>
 	</table>
 	<ul class="cmf-buttons">
-		<li class="item is-primary"><?=$form->button('確認','confirm','primary')?></li>
+		<li class="cmf-buttons__item is-primary"><?=$form->button('確認','confirm','primary')?></li>
 	</ul>
 </div>
