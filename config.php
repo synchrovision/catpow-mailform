@@ -11,10 +11,12 @@ $config=array(
 	'log'=>true,
 	'inputs'=>array(
 		'name'=>array('type'=>'text','label'=>'お名前','required'=>true),
+		'kana'=>array('type'=>'katakana','label'=>'フリガナ','reflect'=>'name','required'=>true),
 		'email'=>array('type'=>'email','label'=>'メールアドレス','size'=>30,'required'=>true),
+		'email_confirm'=>array('type'=>'confirm','label'=>'再入力','caption'=>'もう一度入力してください','size'=>30,'reflect'=>'email','required'=>true),
 		'zipcode'=>array('type'=>'ZipCode','label'=>'郵便番号','pref'=>'prefecture','addr'=>'address'),
-		'prefecture'=>array('type'=>'text','label'=>'都道府県'),
-		'address'=>array('type'=>'text','label'=>'住所'),
+		'prefecture'=>array('type'=>'select_json','value'=>'prefecture','label'=>'都道府県'),
+		'address'=>array('type'=>'text','label'=>'住所','size'=>50),
 		'body'=>array('type'=>'textarea','label'=>'お問合せ内容','required'=>true),
 	)
 );
