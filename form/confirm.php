@@ -1,6 +1,9 @@
 <?php
+$form->stop_timer('input');
+$form->start_timer('confirm');
 $form->receive();
 $form->clear();
+$res['uri']='./confirm.html';
 ?>
 <div class="cmf-contents">
 	<table class="cmf-table">

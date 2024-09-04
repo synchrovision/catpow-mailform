@@ -1,8 +1,11 @@
 <?php
+$form->stop_timer('input');
+$form->stop_timer('confirm');
 $form->send('apply');
 $form->send('reply');
 $form->put_log();
 $form->clear_all();
+$res['uri']='thanks.html';
 ?>
 <div class="cmf-contents">
 	<h3 class="cmf-heading">
