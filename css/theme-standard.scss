@@ -158,7 +158,7 @@ $sizeUnit:0.0625rem;
 			@include txt((c:b));
 		}
 		&.secondary{
-			
+			@include bdr((s:s,w:1));
 		}
 		&.disabled{
 			@include trn((o:.5,gry:80%));
