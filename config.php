@@ -10,6 +10,7 @@ $config=array(
 	),
 	'log'=>true,
 	'inputs'=>array(
+		'type'=>array('type'=>'radio','label'=>'お問合せ内容','value'=>array('送信テスト'=>'test','その他'=>'etc'),'required'=>true),
 		'name'=>array('type'=>'text','label'=>'お名前','required'=>true),
 		'kana'=>array('type'=>'katakana','label'=>'フリガナ','reflect'=>'name','required'=>true),
 		'email'=>array('type'=>'email','label'=>'メールアドレス','size'=>30,'required'=>true),
