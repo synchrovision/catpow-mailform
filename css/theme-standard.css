@@ -1,32 +1,37 @@
-@charset "utf-8";
+@charset "UTF-8";
+.cmf-form {
+  padding: 1.25rem;
+}
 .cmf-contents {
-  margin: 50px 10px;
+  max-width: 60rem;
+  width: auto;
+  margin: 3.125rem auto;
 }
 .cmf-heading {
   display: block;
   position: relative;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
   word-break: keep-all;
 }
 .cmf-heading::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
   margin: auto;
-  width: 100px;
-  height: 1px;
+  width: 6.25rem;
+  height: 0.0625rem;
   background-color: #646464;
 }
 .cmf-text {
-  margin: 40px 20px;
+  margin: 2.5rem 1.25rem;
   text-align: justify;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 2em;
 }
 .cmf-text.center {
@@ -36,87 +41,99 @@
   position: relative;
 }
 .cmf-input input:not([type="radio"], [type="checkbox"]) {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 0.625rem;
+  box-sizing: content-box;
+  max-width: calc(100% - 2rem);
+  width: auto;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-color: #b2b2b2;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.cmf-input textarea {
+.cmf-input-textarea {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.cmf-input select {
+.cmf-input-select {
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: max-content;
-  padding: 10px;
+  padding: 0.625rem;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-color: #b2b2b2;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
+}
+.cmf-input-checkbox__item, .cmf-input-radio__item {
+  display: inline-block;
+  position: relative;
+  padding: 0.625rem;
+  padding-left: 1.875rem;
+  margin: 0.3125rem;
+}
+.cmf-input-checkbox__item-input, .cmf-input-radio__item-input {
+  position: absolute;
+  top: 0.9375rem;
+  left: 0.3125rem;
 }
 .cmf-input__alert {
   display: block;
   position: absolute;
   width: max-content;
   top: -2.5em;
-  left: 0px;
-  right: 0px;
+  left: 0rem;
+  right: 0rem;
   padding: 0.5em;
   margin: auto;
-  background-color: #00377e;
-  border-radius: 3px;
-  font-size: 16px;
+  background-color: #635F53;
+  border-radius: 0.1875rem;
+  font-size: 1rem;
   line-height: 1em;
   color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 1;
-  transform: -webkit- translateY(0px);
-  transform: translateY(0px);
+  transform: -webkit- translateY(0rem);
+  transform: translateY(0rem);
   pointer-events: none;
 }
 .cmf-input__alert::after {
-  content: '';
+  content: "";
   display: block;
-  width: 0px;
+  width: 0rem;
   position: absolute;
   top: 100%;
-  left: 0px;
-  right: 0px;
+  left: 0rem;
+  right: 0rem;
   margin: auto;
   border-style: solid;
-  border-width: 8px;
+  border-width: 0.5rem;
   border-color: transparent;
-  border-top-color: #00377e;
+  border-top-color: #635F53;
 }
 .cmf-input:not(.is-error) .cmf-input__alert {
   opacity: 0;
   transform: -webkit- translateY(0.5em);
   transform: translateY(0.5em);
 }
-.cmf-checkbox__item {
+.cmf-ui-zipcode__sec0 {
   display: inline-block;
-  position: relative;
-  padding: 10px;
-  padding-left: 30px;
-  margin: 5px;
+  width: 3ch;
 }
-.cmf-checkbox__item__input {
-  position: absolute;
-  top: 15px;
-  left: 5px;
+.cmf-ui-zipcode__sec1 {
+  display: inline-block;
+  width: 4ch;
+}
+.cmf-ui-zipcode__sep {
+  display: inline-block;
+  margin: auto 0.5em;
 }
 .cmf-label {
   cursor: pointer;
@@ -126,48 +143,45 @@
   border-spacing: 0px;
   width: 100%;
 }
+.cmf-table > tbody > tr:not(:last-child) {
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625rem;
+  border-bottom-color: #b2b2b2;
+}
 .cmf-table > tbody > tr.required > td::before, .cmf-table > tbody > tr.optional > td::before {
   display: block;
   position: absolute;
-  padding: 10px;
+  padding: 0.25em 0.5em;
   height: min-content;
-  top: 0px;
-  bottom: 0px;
-  left: 20px;
+  top: 0rem;
+  bottom: 0rem;
+  left: 1.25rem;
   margin: auto;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #ffffff;
 }
 .cmf-table > tbody > tr.required > td::before {
-  content: '必須';
-  background-color: #7e0000;
+  content: "必須";
+  background-color: #E56C2C;
 }
 .cmf-table > tbody > tr.optional > td::before {
-  content: '任意';
-  background-color: #FFCD31;
+  content: "任意";
+  background-color: hsla(120,var(--tones-m-s),var(--tones-m-l),var(--tones-m-a));
 }
 .cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
-  padding: 20px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #00377e;
+  padding: 1.25rem;
+  font-size: 1rem;
 }
 .cmf-table > tbody > tr > th {
   position: relative;
-  width: 275px;
-  font-size: 20px;
-  background-color: #00377e;
-  color: #ffffff;
+  width: 9.375rem;
+  text-align: left;
 }
 .cmf-table > tbody > tr > td {
   position: relative;
-  padding-left: 90px;
-  font-size: 17px;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #00377e;
+  padding-left: 5.625rem;
 }
-@media (max-width:959px) {
+@media (max-width:960px) {
   .cmf-table {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -192,18 +206,11 @@
     appearance: none;
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     box-sizing: border-box;
   }
   .cmf-table > tbody > tr > td {
-    padding-left: 90px;
-  }
-}
-@media (min-width:960px) {
-  .cmf-table > tbody > tr:not(:last-child) > th {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #ffffff;
+    padding-left: 5.625rem;
   }
 }
 .cmf-buttons {
@@ -215,44 +222,40 @@
   flex-wrap: wrap;
   -webkit-justify-content: center;
   justify-content: center;
-  margin: 50px auto;
-  padding: 10px;
+  margin: 3.125rem auto;
+  padding: 0.625rem;
   list-style: none;
 }
-.cmf-buttons > .item {
+.cmf-buttons__item {
   -webkit-box-flex: 0;
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: 350px;
-  padding: 10px;
+  flex-basis: 21.875rem;
+  padding: 0.625rem;
 }
 .cmf-button {
   display: block;
-  padding: 10px;
-  max-width: 350px;
+  padding: 0.625rem;
+  max-width: 21.875rem;
   width: 100%;
   box-sizing: border-box;
   background-color: #ffffff;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #00377e;
-  border-radius: 50px;
   text-align: center;
-  font-size: 24px;
-  color: #00377e;
+  font-size: 1.5rem;
+  color: #635F53;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .cmf-button.primary {
-  background-color: #00377e;
+  background-color: #635F53;
   color: #ffffff;
 }
 .cmf-button.disabled {
   opacity: 0.5;
   -webkit-filter: grayscale(80%);
   filter: grayscale(80%);
-  cursor: nd;
+  cursor: no-drop;
 }
 .cmf-flex {
   display: -webkit-box;
@@ -263,40 +266,40 @@
   flex-wrap: wrap;
   -webkit-align-items: center;
   align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .cmf-flex__item {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 400px;
-  padding: 10px;
+  flex-basis: 25rem;
+  padding: 0.625rem;
 }
 .cmf-annotation {
   display: block;
   position: relative;
-  padding: 5px;
+  padding: 0.3125rem;
   padding-left: 2em;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .cmf-annotation::before {
-  content: '※';
+  content: "※";
   display: block;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 0.3125rem;
+  left: 0.3125rem;
 }
 .cmf-caption {
   display: block;
-  padding: 5px;
-  font-size: 16px;
+  padding: 0.3125rem;
+  font-size: 0.875rem;
 }
 .cmf-agreement {
   display: block;
-  padding: 10px 30px;
-  margin: 10px auto;
+  padding: 0.625rem 1.875rem;
+  margin: 0.625rem auto;
   width: max-content;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 /*# sourceMappingURL=./theme-standard.css.map */

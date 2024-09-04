@@ -1,8 +1,13 @@
-@import 'config.scss';
+@import 'style_config.scss';
+
+$sizeUnit:0.0625rem;
 
 .cmf{
+	&-form{
+		@include bnd((pd:20));
+	}
 	&-contents{
-		@include bnd((mg:50 10));
+		@include bnd((w:a 960,mg:50 a));
 	}
 	&-heading{
 		@include bnd((d:b,p:r,mgb:40,pdb:20));
@@ -23,18 +28,26 @@
 	&-input{
 		@include bnd((p:r));
 		input:not([type="radio"],[type="checkbox"]){
-			@include bnd((d:b,w:f,pd:10,bs:b));
+			@include bnd((pd:10,bs:c,w:a calc(100% - 2rem)));
 			@include bdr((s:s,w:1,c:t 50));
 			@include txt((p:16));
 		}
-		textarea{
+		&-textarea{
 			@include bnd((d:b,w:f,pd:10,bs:b));
 			@include txt((p:16));
 		}
-		select{
+		&-select{
 			@include bnd((d:b,ap:n,w:max,pd:10));
 			@include bdr((s:s,w:1,c:t 50));
 			@include txt((a:c,p:16));
+		}
+		&-checkbox,&-radio{
+			&__item{
+				@include bnd((d:ib,p:r,pd:10,pdl:30,mg:5));
+				&-input{
+					@include bnd((p:a,t:15,l:5));
+				}
+			}
 		}
 		&__alert{
 			@include bnd((d:b,p:a,w:max,t:-2.5em,l:0,r:0,pd:.5em,mg:a));
@@ -55,11 +68,16 @@
 			@include trn((o:0,y:.5em));
 		}
 	}
-	&-checkbox{
-		&__item{
-			@include bnd((d:ib,p:r,pd:10,pdl:30,mg:5));
-			&__input{
-				@include bnd((p:a,t:15,l:5));
+	&-ui{
+		&-zipcode{
+			&__sec0{
+				@include bnd((d:ib,w:3ch));
+			}
+			&__sec1{
+				@include bnd((d:ib,w:4ch));
+			}
+			&__sep{
+				@include bnd((d:ib,mg:a .5em));
 			}
 		}
 	}
@@ -71,42 +89,41 @@
 		@include bnd((w:f));
 		>tbody{
 			>tr{
+				&:not(:last-child){
+					@include bdr((p:b,s:s,w:1,c:t 50));
+				}
 				&.required,&.optional{
 					>td::before{
-						@include bnd((d:b,p:a,pd:10,h:min,t:0,b:0,l:20,mg:a));
+						@include bnd((d:b,p:a,pd:.25em .5em,h:min,t:0,b:0,l:20,mg:a));
 						@include txt((p:12,c:b));;
 					}
 				}
 				&.required{
 					>td::before{
 						content:'必須';
-						@include bg((c:1));
+						@include bg((c:a));
 					}
 				}
 				&.optional{
 					>td::before{
 						content:'任意';
-						@include bg((c:#FFCD31));
+						@include bg((c:m--120));
 					}
 				}
 				>th,>td{
 					@include bnd((pd:20));
-					@include bdr((s:s,w:2,c:m));
+					@include txt((p:16));
 				}
 				>th{
-					@include bnd((p:r,w:275));
-					@include txt((p:20));
-					@include bg((c:m));
-					@include txt((c:b));
+					@include bnd((p:r,w:150));
+					@include txt((a:l));
 				}
 				>td{
 					@include bnd((p:r,pdl:90));
-					@include txt((p:17));
-					@include bdr((p:r,s:s,w:2,c:m));
 				}
 			}
 		}
-		@include bp(-2){
+		@include bp(-960){
 			@include bnd((ap:n,d:b));
 			>tbody{
 				@include bnd((ap:n,d:b));
@@ -121,30 +138,18 @@
 				}
 			}
 		}
-		@include bp(2){
-			>tbody{
-				>tr{
-					&:not(:last-child){
-						>th{
-							@include bdr((p:b,s:s,w:2,c:b));
-						}
-					}
-				}
-			}
-		}
 	}
 	&-buttons{
 		@include flx((w:w,j:c));
 		@include bnd((mg:50 a,pd:10));
 		@include txt((l:n));
-		>.item{
+		&__item{
 			@include bnd((f:0 0 350,pd:10));
 		}
 	}
 	&-button{
 		@include bnd((d:b,pd:10,w:f 350,bs:b));
 		@include bg((c:b));
-		@include bdr((s:s,w:2,c:m,r:50));
 		@include txt((a:c,p:24,c:m));
 		@include usr((c:p));
 		@include trn((t:.2s));
@@ -177,7 +182,7 @@
 	}
 	&-caption{
 		@include bnd((d:b,pd:5));
-		@include txt((p:16));
+		@include txt((p:14));
 	}
 	&-agreement{
 		@include bnd((d:b,pd:10 30,mg:10 a,w:max));
