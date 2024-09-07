@@ -2,6 +2,12 @@
 .cmf-form {
   padding: 1.25rem;
 }
+.cmf-link {
+  text-decoration-line: underline;
+}
+.cmf-link:hover {
+  color: #635F53;
+}
 .cmf-contents {
   max-width: 60rem;
   width: auto;
@@ -43,7 +49,7 @@
 .cmf-input input:not([type="radio"], [type="checkbox"]) {
   padding: 0.625rem;
   box-sizing: content-box;
-  max-width: calc(100% - 2rem);
+  max-width: calc(100% - 3rem);
   width: auto;
   border-style: solid;
   border-width: 0.0625rem;
@@ -118,6 +124,14 @@
   border-color: transparent;
   border-top-color: #635F53;
 }
+.cmf-input.is-inline {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+}
+.cmf-input.is-block {
+  display: block;
+}
 .cmf-input:not(.is-error) .cmf-input__alert {
   opacity: 0;
   transform: -webkit- translateY(0.5em);
@@ -148,38 +162,44 @@
   border-bottom-width: 0.0625rem;
   border-bottom-color: #b2b2b2;
 }
-.cmf-table > tbody > tr.required > td::before, .cmf-table > tbody > tr.optional > td::before {
+.cmf-table > tbody > tr.required > th::after, .cmf-table > tbody > tr.optional > th::after {
   display: block;
   position: absolute;
   padding: 0.25em 0.5em;
   height: min-content;
   top: 0rem;
   bottom: 0rem;
-  left: 1.25rem;
+  right: 0.75rem;
   margin: auto;
   font-size: 0.75rem;
   color: #ffffff;
 }
-.cmf-table > tbody > tr.required > td::before {
+.cmf-table > tbody > tr.required > th::after {
   content: "必須";
-  background-color: #E56C2C;
+  background-color: #635F53;
 }
-.cmf-table > tbody > tr.optional > td::before {
+.cmf-table > tbody > tr.optional > th::after {
   content: "任意";
-  background-color: hsla(120,var(--tones-m-s),var(--tones-m-l),var(--tones-m-a));
+  background-color: rgba(100, 100, 100, 0.5);
 }
 .cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
-  padding: 1.25rem;
-  font-size: 1rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  font-weight: 400;
+  vertical-align: middle;
+  border-style: none;
 }
 .cmf-table > tbody > tr > th {
   position: relative;
-  width: 9.375rem;
+  width: 12.5rem;
+  padding-right: 5rem;
   text-align: left;
+  word-break: keep-all;
+  background-color: rgba(100, 100, 100, 0.1);
 }
 .cmf-table > tbody > tr > td {
   position: relative;
-  padding-left: 5.625rem;
 }
 @media (max-width:960px) {
   .cmf-table {
@@ -206,11 +226,11 @@
     appearance: none;
     display: block;
     width: 100%;
-    padding: 1.25rem;
+    padding: 0.75rem;
     box-sizing: border-box;
   }
-  .cmf-table > tbody > tr > td {
-    padding-left: 5.625rem;
+  .cmf-table > tbody > tr > th {
+    padding-right: 5rem;
   }
 }
 .cmf-buttons {
@@ -235,7 +255,7 @@
 }
 .cmf-button {
   display: block;
-  padding: 0.625rem;
+  padding: 1rem 0.5rem;
   max-width: 21.875rem;
   width: 100%;
   box-sizing: border-box;
@@ -300,10 +320,11 @@
 }
 .cmf-agreement {
   display: block;
-  padding: 0.625rem 1.875rem;
+  padding: 0.5rem;
   margin: 0.625rem auto;
-  width: max-content;
-  font-size: 1rem;
+  width: fit-content;
+  font-size: 0.875rem;
+  word-break: keep-all;
   cursor: pointer;
 }
 /*# sourceMappingURL=./theme-standard.css.map */

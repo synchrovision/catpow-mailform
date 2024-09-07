@@ -1,10 +1,14 @@
 @import 'style_config.scss';
 
-$sizeUnit:0.0625rem;
-
 .cmf{
 	&-form{
 		@include bnd((pd:20));
+	}
+	&-link{
+		@include txt((td:u));
+		&:hover{
+			@include txt((c:m));
+		}
 	}
 	&-contents{
 		@include bnd((w:a 960,mg:50 a));
@@ -28,7 +32,7 @@ $sizeUnit:0.0625rem;
 	&-input{
 		@include bnd((p:r));
 		input:not([type="radio"],[type="checkbox"]){
-			@include bnd((pd:10,bs:c,w:a calc(100% - 2rem)));
+			@include bnd((pd:10,bs:c,w:a calc(100% - 3rem)));
 			@include bdr((s:s,w:1,c:t 50));
 			@include txt((p:16));
 		}
@@ -64,6 +68,12 @@ $sizeUnit:0.0625rem;
 				@include bdr((p:t,c:m));
 			}
 		}
+		&.is-inline{
+			@include bnd((d:ib,w:a f));
+		}
+		&.is-block{
+			@include bnd((d:b));
+		}
 		&:not(.is-error) &__alert{
 			@include trn((o:0,y:.5em));
 		}
@@ -93,33 +103,35 @@ $sizeUnit:0.0625rem;
 					@include bdr((p:b,s:s,w:1,c:t 50));
 				}
 				&.required,&.optional{
-					>td::before{
-						@include bnd((d:b,p:a,pd:.25em .5em,h:min,t:0,b:0,l:20,mg:a));
+					>th::after{
+						@include bnd((d:b,p:a,pd:.25em .5em,h:min,t:0,b:0,r:12,mg:a));
 						@include txt((p:12,c:b));;
 					}
 				}
 				&.required{
-					>td::before{
+					>th::after{
 						content:'必須';
-						@include bg((c:a));
+						@include bg((c:m));
 					}
 				}
 				&.optional{
-					>td::before{
+					>th::after{
 						content:'任意';
-						@include bg((c:m--120));
+						@include bg((c:t 1 .5));
 					}
 				}
 				>th,>td{
-					@include bnd((pd:20));
-					@include txt((p:16));
+					@include bnd((pd:16));
+					@include txt((p:14,h:1.5em,w:r,v:m));
+					@include bdr((s:n));
 				}
 				>th{
-					@include bnd((p:r,w:150));
-					@include txt((a:l));
+					@include bnd((p:r,w:200,pdr:80));
+					@include txt((a:l,b:k));
+					@include bg((c:t 1 .1));
 				}
 				>td{
-					@include bnd((p:r,pdl:90));
+					@include bnd((p:r));
 				}
 			}
 		}
@@ -130,10 +142,10 @@ $sizeUnit:0.0625rem;
 				>tr{
 					@include bnd((ap:n,d:b));
 					>th,>td{
-						@include bnd((ap:n,d:b,w:f,pd:20,bs:b));
+						@include bnd((ap:n,d:b,w:f,pd:12,bs:b));
 					}
-					>td{
-						@include bnd((pdl:90));
+					>th{
+						@include bnd((pdr:80));
 					}
 				}
 			}
@@ -148,7 +160,7 @@ $sizeUnit:0.0625rem;
 		}
 	}
 	&-button{
-		@include bnd((d:b,pd:10,w:f 350,bs:b));
+		@include bnd((d:b,pd:16 8,w:f 350,bs:b));
 		@include bg((c:b));
 		@include txt((a:c,p:24,c:m));
 		@include usr((c:p));
@@ -185,8 +197,8 @@ $sizeUnit:0.0625rem;
 		@include txt((p:14));
 	}
 	&-agreement{
-		@include bnd((d:b,pd:10 30,mg:10 a,w:max));
-		@include txt((p:16));
+		@include bnd((d:b,pd:8,mg:10 a,w:fit));
+		@include txt((p:14,b:k));
 		@include usr((c:p));
 	}
 }
