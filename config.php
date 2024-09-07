@@ -1,12 +1,20 @@
 <?php
 $config=[
 	/*
-	logディレクトリにかけられるBasic認証の設定
+	logを保存するディレクトリとBasic認証の設定
 	*/
-	'user'=>'user',
-	'password'=>'password',
+	'log'=>[
+		'dir'=>__DIR__.'/log',
+		'username'=>'username',
+		'password'=>'password',
+	],
 	/*
 	メール送信にSMTPを使う場合に設定します
+	'smtp'=>[
+		'host'=>'',
+		'username'=>'',
+		'password'=>'',
+	]
 	*/
 	'smtp'=>false,
 	/*
