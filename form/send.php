@@ -1,6 +1,4 @@
 <?php
-$form->stop_timer('input');
-$form->stop_timer('confirm');
 $form->send('apply');
 $form->send('reply');
 $form->put_log();

@@ -1,6 +1,4 @@
 <?php
-$form->start_timer('input');
-$form->stop_timer('confirm');
 $form->clear();
 $res['uri']='#';
 ?>
