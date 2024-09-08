@@ -9,21 +9,20 @@ $config=[
 		'password'=>'password',
 	],
 	/*
-	メール送信にSMTPを使う場合に設定します
+	メール送信に使うSMTPの設定、設定しない場合はPHPのmail関数で送信されます
 	'smtp'=>[
-		'host'=>'',
-		'username'=>'',
-		'password'=>'',
-	]
+		'host'=>__DIR__.'/log',
+		'username'=>'username',
+		'password'=>'password',
+	],
 	*/
-	'smtp'=>false,
 	/*
 	mailディレクトリに設定された各メールのテンプレートファイルにおいて
 	$to,$from,$subject変数が設定されなかった場合の初期値
 	*/
 	'defaultHeaders'=>[
-		'from'=>'Example<noreply@example.com>',
-		'to'=>'Example<noreply@example.com>',
+		'from'=>'Example<noreply@catpow.info>',
+		'to'=>'Example<norepl@catpow.info>',
 		'subject'=>'Mail Send from MailForm'
 	],
 	/*
