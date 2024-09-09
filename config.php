@@ -4,18 +4,18 @@ $config=[
 	logを保存するディレクトリとBasic認証の設定
 	*/
 	'log'=>[
-		'dir'=>__DIR__.'/log',
+		'dir'=>FORM_DIR.'/log',
 		'username'=>'username',
 		'password'=>'password',
 	],
 	/*
 	メール送信に使うSMTPの設定、設定しない場合はPHPのmail関数で送信されます
-	'smtp'=>[
-		'host'=>__DIR__.'/log',
-		'username'=>'username',
-		'password'=>'password',
-	],
 	*/
+	'smtp'=>[
+		'host'=>$_ENV['SMTP_HOST'],
+		'username'=>$_ENV['SMTP_USER'],
+		'password'=>$_ENV['SMTP_PASSWORD'],
+	],
 	/*
 	mailディレクトリに設定された各メールのテンプレートファイルにおいて
 	$to,$from,$subject変数が設定されなかった場合の初期値
