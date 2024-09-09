@@ -1,4 +1,5 @@
 node_modules
 _notes
 .DS_Store
+.env
 /log
