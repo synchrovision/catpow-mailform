@@ -4,9 +4,9 @@ $config=[
 	logを保存するディレクトリとBasic認証の設定
 	*/
 	'log'=>[
-		'dir'=>FORM_DIR.'/log',
-		'username'=>'username',
-		'password'=>'password',
+		'dir'=>$_ENV['LOG_DIR'],
+		'username'=>$_ENV['LOG_USER'],
+		'password'=>$_ENV['LOG_PASSWORD'],
 	],
 	/*
 	メール送信に使うSMTPの設定、設定しない場合はPHPのmail関数で送信されます
