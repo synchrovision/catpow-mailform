@@ -2,7 +2,14 @@
 
 .cmf{
 	&-form{
-		@include bnd((pd:20));
+		@include bnd((p:r,pd:20));
+		&.is-locked{
+			&::before{
+				content:'';
+				@include bnd((d:b,p:a,i:0));
+				@include bg((c:b 1 .2));
+			}
+		}
 	}
 	&-link{
 		@include txt((td:u));

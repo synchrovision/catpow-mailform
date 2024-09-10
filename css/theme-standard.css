@@ -1,6 +1,18 @@
 @charset "UTF-8";
 .cmf-form {
+  position: relative;
   padding: 1.25rem;
+}
+.cmf-form.is-locked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  inset: 0rem;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .cmf-link {
   text-decoration-line: underline;
