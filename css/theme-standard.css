@@ -339,4 +339,12 @@
   word-break: keep-all;
   cursor: pointer;
 }
+.cmf-preview {
+  width: 60rem;
+  margin: auto;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+}
+.cmf-preview * {
+  all: revert;
+}
 /*# sourceMappingURL=./theme-standard.css.map */

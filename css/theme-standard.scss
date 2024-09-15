@@ -208,4 +208,9 @@
 		@include txt((p:14,b:k));
 		@include usr((c:p));
 	}
+	&-preview{
+		@include bnd((w:c,mg:a));
+		@include shd((b:4));
+		*{all:revert;}
+	}
 }
