@@ -1,6 +1,6 @@
 <?php
 $isHTML=true;
-//$to="{$form->values['name']}<{$form->values['email']}>";
+$to="{$form->values['name']}<{$form->values['email']}>";
 $subject="CatpowMailer HTML Mail Sample";
 ob_start();
 ?>
