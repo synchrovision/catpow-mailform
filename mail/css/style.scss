@@ -9,53 +9,53 @@ $sizes:(
 	&-body{
 		@include bnd((w:f));
 		&__thead{
-			&-tr{
-				&-th{
-					@include bnd((pd:20));
-					@include bg((c:m));
-					@include txt((a:wc,p:20,c:i));
-					>.logo{
-						@include bnd((d:b,w:a,h:40));
-					}
-					>.title{
-						@include bnd((d:b,w:c,h:a));
-					}
-				}
-			}
 		}
 		&__tbody{
-			&-tr{
-				&-td{
-					@include bnd((pd:40 0));
-					@include txt((a:wc));
-					.link{
-						@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
-						@include bdr((s:s,w:2,r:1em));
-						@include txt((a:c,p:18,c:m,h:1em,td:n,w:b));
-					}
+		}
+		&__tfoot{
+		}
+		&-header{
+			&__th{
+				@include bnd((pd:20));
+				@include bg((c:m));
+				@include txt((a:wc,p:20,c:i));
+				>.logo{
+					@include bnd((d:b,w:a,h:40));
 				}
-				&.has-bg-color-strong{
-					@include bg((c:m));
-				}
-				&.has-bg-color-weak{
-					@include bg((c:s));
-				}
-				&.is-align-center{
-					@include txt((a:c));
+				>.title{
+					@include bnd((d:b,w:c,h:a));
 				}
 			}
 		}
-		&__tfoot{
-			&-tr{
-				&-td{
-					@include bnd((pd:20 0));
-					@include bg((c:m));
-					@include txt((a:wc,p:16,w:b,c:i));
-					>.link{
-						@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
-						@include bdr((s:s,w:1,r:1em));
-						@include txt((a:c,p:18,c:i,h:1em,td:n));
-					}
+		&-row{
+			&__td{
+				@include bnd((pd:40 0));
+				@include txt((a:wc));
+				.link{
+					@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
+					@include bdr((s:s,w:2,r:1em));
+					@include txt((a:c,p:18,c:m,h:1em,td:n,w:b));
+				}
+			}
+			&.has-bg-color-strong{
+				@include bg((c:m));
+			}
+			&.has-bg-color-weak{
+				@include bg((c:s));
+			}
+			&.is-align-center{
+				@include txt((a:c));
+			}
+		}
+		&-footer{
+			&__td{
+				@include bnd((pd:20 0));
+				@include bg((c:m));
+				@include txt((a:wc,p:16,w:b,c:i));
+				>.link{
+					@include bnd((d:b,w:fit,mgt:1em,pd:.25em 2em));
+					@include bdr((s:s,w:1,r:1em));
+					@include txt((a:c,p:18,c:i,h:1em,td:n));
 				}
 			}
 		}
@@ -179,41 +179,35 @@ $sizes:(
 		$block:&;
 		@include bnd((w:a c,mgb:20));
 		@include txt((a:l));
-		&__thead{
-			&-tr{
-				$row:&;
-				&-th{
-					@include bnd((pd:.25em .5em));
-					@include txt((w:b,c:m));
-					#{$row}.is-level-1>&{
-						@include txt((a:c,p:36));
-					}
-					#{$row}.is-level-2>&{
-						@include txt((p:24));
-					}
-					#{$row}.is-level-3>&{
-						@include txt((p:18));
-					}
-					#{$row}.is-level-4>&{
-						@include txt((p:16));
-					}
-					#{$row}.is-level-5>&{
-						@include txt((p:14));
-					}
+		&-header{
+			$row:&;
+			&__th{
+				@include bnd((pd:.25em .5em));
+				@include txt((w:b,c:m));
+				#{$row}.is-level-1>&{
+					@include txt((a:c,p:36));
+				}
+				#{$row}.is-level-2>&{
+					@include txt((p:24));
+				}
+				#{$row}.is-level-3>&{
+					@include txt((p:18));
+				}
+				#{$row}.is-level-4>&{
+					@include txt((p:16));
+				}
+				#{$row}.is-level-5>&{
+					@include txt((p:14));
 				}
 			}
 		}
-		&__tbody{
-			&-tr{
-				&-td{
-					@include bnd((pd:20 4));
-				}
+		&-row{
+			&__td{
+				@include bnd((pd:20 4));
 			}
 		}
-		&__tfoot{
-			&-tr{
-				&-td{
-				}
+		&-footer{
+			&__td{
 			}
 		}
 	}
@@ -222,49 +216,43 @@ $sizes:(
 		@include bnd((d:b,w:c,mgb:20,o:h));
 		@include bdr((s:s,w:2,c:t 20,r:.5em));
 		@include txt((a:l));
-		&__thead{
-			&-tr{
-				$row:&;
-				&-th{
-					@include bnd((pd:.5em 1em));
+		&-header{
+			$row:&;
+			&__th{
+				@include bnd((pd:.5em 1em));
+				@include bg((c:m));
+				@include txt((w:b));
+				#{$row}.is-level-1>&{
 					@include bg((c:m));
-					@include txt((w:b));
-					#{$row}.is-level-1>&{
-						@include bg((c:m));
-						@include txt((p:36,c:i));
-					}
-					#{$row}.is-level-2>&{
-						@include bg((c:m));
-						@include txt((p:24,c:i));
-					}
-					#{$row}.is-level-3>&{
-						@include bg((c:m 10));
-						@include txt((p:18,c:m));
-					}
-					#{$row}.is-level-4>&{
-						@include bg((c:m 10));
-						@include txt((p:16,c:m));
-					}
-					#{$row}.is-level-5>&{
-						@include bg((c:m 10));
-						@include txt((p:14,c:m));
-					}
+					@include txt((p:36,c:i));
+				}
+				#{$row}.is-level-2>&{
+					@include bg((c:m));
+					@include txt((p:24,c:i));
+				}
+				#{$row}.is-level-3>&{
+					@include bg((c:m 10));
+					@include txt((p:18,c:m));
+				}
+				#{$row}.is-level-4>&{
+					@include bg((c:m 10));
+					@include txt((p:16,c:m));
+				}
+				#{$row}.is-level-5>&{
+					@include bg((c:m 10));
+					@include txt((p:14,c:m));
 				}
 			}
 		}
-		&__tbody{
-			&-tr{
-				&-td{
-					@include bnd((pd:20));
-				}
+		&-row{
+			&__td{
+				@include bnd((pd:20));
 			}
 		}
-		&__tfoot{
-			&-tr{
-				&-td{
-					@include bnd((pd:.5em 1em));
-					@include bg((c:t 10));
-				}
+		&-footer{
+			&__td{
+				@include bnd((pd:.5em 1em));
+				@include bg((c:t 10));
 			}
 		}
 	}

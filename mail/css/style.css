@@ -75,28 +75,28 @@ body.outlook p {
 .mail-body {
   width: 100%;
 }
-.mail-body__thead-tr-th {
+.mail-body-header__th {
   padding: 1.25rem;
   background-color: #635F53;
   text-align: -webkit-center;
   font-size: 1.25rem;
   color: #fff;
 }
-.mail-body__thead-tr-th > .logo {
+.mail-body-header__th > .logo {
   display: block;
   width: auto;
   height: 2.5rem;
 }
-.mail-body__thead-tr-th > .title {
+.mail-body-header__th > .title {
   display: block;
   width: 600px;
   height: auto;
 }
-.mail-body__tbody-tr-td {
+.mail-body-row__td {
   padding: 2.5rem 0rem;
   text-align: -webkit-center;
 }
-.mail-body__tbody-tr-td .link {
+.mail-body-row__td .link {
   display: block;
   width: fit-content;
   margin-top: 1em;
@@ -111,16 +111,16 @@ body.outlook p {
   text-decoration: none;
   font-weight: 700;
 }
-.mail-body__tbody-tr.has-bg-color-strong {
+.mail-body-row.has-bg-color-strong {
   background-color: #635F53;
 }
-.mail-body__tbody-tr.has-bg-color-weak {
+.mail-body-row.has-bg-color-weak {
   background-color: #f0f0f0;
 }
-.mail-body__tbody-tr.is-align-center {
+.mail-body-row.is-align-center {
   text-align: center;
 }
-.mail-body__tfoot-tr-td {
+.mail-body-footer__td {
   padding: 1.25rem 0rem;
   background-color: #635F53;
   text-align: -webkit-center;
@@ -128,7 +128,7 @@ body.outlook p {
   font-weight: 700;
   color: #fff;
 }
-.mail-body__tfoot-tr-td > .link {
+.mail-body-footer__td > .link {
   display: block;
   width: fit-content;
   margin-top: 1em;
@@ -265,28 +265,28 @@ body.outlook p {
   margin-bottom: 1.25rem;
   text-align: left;
 }
-.mail-section__thead-tr-th {
+.mail-section-header__th {
   padding: 0.25em 0.5em;
   font-weight: 700;
   color: #635F53;
 }
-.mail-section__thead-tr.is-level-1 > .mail-section__thead-tr-th {
+.mail-section-header.is-level-1 > .mail-section-header__th {
   text-align: center;
   font-size: 2.25rem;
 }
-.mail-section__thead-tr.is-level-2 > .mail-section__thead-tr-th {
+.mail-section-header.is-level-2 > .mail-section-header__th {
   font-size: 1.5rem;
 }
-.mail-section__thead-tr.is-level-3 > .mail-section__thead-tr-th {
+.mail-section-header.is-level-3 > .mail-section-header__th {
   font-size: 1.125rem;
 }
-.mail-section__thead-tr.is-level-4 > .mail-section__thead-tr-th {
+.mail-section-header.is-level-4 > .mail-section-header__th {
   font-size: 1rem;
 }
-.mail-section__thead-tr.is-level-5 > .mail-section__thead-tr-th {
+.mail-section-header.is-level-5 > .mail-section-header__th {
   font-size: 0.875rem;
 }
-.mail-section__tbody-tr-td {
+.mail-section-row__td {
   padding: 1.25rem 0.25rem;
 }
 .mail-frame {
@@ -300,40 +300,40 @@ body.outlook p {
   border-radius: 0.5em;
   text-align: left;
 }
-.mail-frame__thead-tr-th {
+.mail-frame-header__th {
   padding: 0.5em 1em;
   background-color: #635F53;
   font-weight: 700;
 }
-.mail-frame__thead-tr.is-level-1 > .mail-frame__thead-tr-th {
+.mail-frame-header.is-level-1 > .mail-frame-header__th {
   background-color: #635F53;
   font-size: 2.25rem;
   color: #fff;
 }
-.mail-frame__thead-tr.is-level-2 > .mail-frame__thead-tr-th {
+.mail-frame-header.is-level-2 > .mail-frame-header__th {
   background-color: #635F53;
   font-size: 1.5rem;
   color: #fff;
 }
-.mail-frame__thead-tr.is-level-3 > .mail-frame__thead-tr-th {
+.mail-frame-header.is-level-3 > .mail-frame-header__th {
   background-color: #efefee;
   font-size: 1.125rem;
   color: #635F53;
 }
-.mail-frame__thead-tr.is-level-4 > .mail-frame__thead-tr-th {
+.mail-frame-header.is-level-4 > .mail-frame-header__th {
   background-color: #efefee;
   font-size: 1rem;
   color: #635F53;
 }
-.mail-frame__thead-tr.is-level-5 > .mail-frame__thead-tr-th {
+.mail-frame-header.is-level-5 > .mail-frame-header__th {
   background-color: #efefee;
   font-size: 0.875rem;
   color: #635F53;
 }
-.mail-frame__tbody-tr-td {
+.mail-frame-row__td {
   padding: 1.25rem;
 }
-.mail-frame__tfoot-tr-td {
+.mail-frame-footer__td {
   padding: 0.5em 1em;
   background-color: #f0f0f0;
 }
