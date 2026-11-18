@@ -44,7 +44,7 @@
   margin: auto;
   width: 6.25rem;
   height: 0.0625rem;
-  background-color: #646464;
+  background-color: #222;
 }
 .cmf-text {
   margin: 2.5rem 1.25rem;
@@ -65,7 +65,7 @@
   width: auto;
   border-style: solid;
   border-width: 0.0625rem;
-  border-color: #b2b2b2;
+  border-color: #919191;
   font-size: 1rem;
 }
 .cmf-input-textarea {
@@ -84,7 +84,7 @@
   padding: 0.625rem;
   border-style: solid;
   border-width: 0.0625rem;
-  border-color: #b2b2b2;
+  border-color: #919191;
   text-align: center;
   font-size: 1rem;
 }
@@ -113,7 +113,7 @@
   border-radius: 0.1875rem;
   font-size: 1rem;
   line-height: 1em;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -172,7 +172,7 @@
 .cmf-table > tbody > tr:not(:last-child) {
   border-bottom-style: solid;
   border-bottom-width: 0.0625rem;
-  border-bottom-color: #b2b2b2;
+  border-bottom-color: #919191;
 }
 .cmf-table > tbody > tr.required > th::after, .cmf-table > tbody > tr.optional > th::after {
   display: block;
@@ -184,7 +184,7 @@
   right: 0.75rem;
   margin: auto;
   font-size: 0.75rem;
-  color: #ffffff;
+  color: #fff;
 }
 .cmf-table > tbody > tr.required > th::after {
   content: "必須";
@@ -192,7 +192,7 @@
 }
 .cmf-table > tbody > tr.optional > th::after {
   content: "任意";
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: rgba(34, 34, 34, 0.5);
 }
 .cmf-table > tbody > tr > th, .cmf-table > tbody > tr > td {
   padding: 1rem;
@@ -208,7 +208,7 @@
   padding-right: 5rem;
   text-align: left;
   word-break: keep-all;
-  background-color: rgba(100, 100, 100, 0.1);
+  background-color: rgba(34, 34, 34, 0.1);
 }
 .cmf-table > tbody > tr > td {
   position: relative;
@@ -271,7 +271,7 @@
   max-width: 21.875rem;
   width: 100%;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center;
   font-size: 1.5rem;
   color: #635F53;
@@ -281,7 +281,7 @@
 }
 .cmf-button.primary {
   background-color: #635F53;
-  color: #ffffff;
+  color: #fff;
 }
 .cmf-button.secondary {
   border-style: solid;

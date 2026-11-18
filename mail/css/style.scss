@@ -64,38 +64,38 @@ $sizes:(
 		@include bnd((mg:0 a .5em));
 		@include txt((c:m,w:b));
 		&.is-level-1{
-			@include txt((p:36,c:m));
+			@include txt((p:36));
 		}
 		&.is-level-2{
-			@include txt((p:24,c:m));
+			@include txt((p:24));
 		}
 		&.is-level-3{
-			@include txt((p:18,c:m));
+			@include txt((p:18));
 		}
 		&.is-level-4{
-			@include txt((p:16,c:m));
+			@include txt((p:16));
 		}
 		&.is-level-5{
-			@include txt((p:14,c:m));
+			@include txt((p:14));
 		}
 	}
 	&-text{
 		@include bnd((mg:0 a .5em));
 		@include txt((c:t));
 		&.is-level-1{
-			@include txt((p:20,c:m));
+			@include txt((p:20));
 		}
 		&.is-level-2{
-			@include txt((p:18,c:m));
+			@include txt((p:18));
 		}
 		&.is-level-3{
-			@include txt((p:16,c:m));
+			@include txt((p:16));
 		}
 		&.is-level-4{
-			@include txt((p:14,c:m));
+			@include txt((p:14));
 		}
 		&.is-level-5{
-			@include txt((p:12,c:m));
+			@include txt((p:12));
 		}
 	}
 	&-button{
