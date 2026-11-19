@@ -40,17 +40,18 @@
 		@include bnd((p:r));
 		input:not([type="radio"],[type="checkbox"]){
 			@include bnd((pd:10,bs:c,w:a calc(100% - 3rem)));
-			@include bdr((s:s,w:1,c:t 50));
+			@include bdr((s:s,w:1,c:l));
 			@include txt((p:16));
 		}
 		&-textarea{
 			@include bnd((d:b,w:f,pd:10,bs:b));
+			@include bdr((s:s,w:1,c:l));
 			@include txt((p:16));
 		}
 		&-select{
 			@include bnd((d:b,ap:n,w:max,pd:10));
-			@include bdr((s:s,w:1,c:t 50));
-			@include txt((a:c,p:16));
+			@include bdr((s:s,w:1,c:l));
+			@include txt((a:c,p:16,c:t));
 		}
 		&-checkbox,&-radio{
 			&__item{
@@ -107,12 +108,12 @@
 		>tbody{
 			>tr{
 				&:not(:last-child){
-					@include bdr((p:b,s:s,w:1,c:t 50));
+					@include bdr((p:b,s:s,w:1,c:l));
 				}
 				&.required,&.optional{
 					>th::after{
 						@include bnd((d:b,p:a,pd:.25em .5em,h:min,t:0,b:0,r:12,mg:a));
-						@include txt((p:12,c:b));;
+						@include txt((p:12,c:i));
 					}
 				}
 				&.required{
@@ -124,7 +125,7 @@
 				&.optional{
 					>th::after{
 						content:'任意';
-						@include bg((c:t 1 .5));
+						@include bg((c:t 1 .2));
 					}
 				}
 				>th,>td{
@@ -135,7 +136,7 @@
 				>th{
 					@include bnd((p:r,w:200,pdr:80));
 					@include txt((a:l,b:k));
-					@include bg((c:t 1 .1));
+					@include bg((c:s));
 				}
 				>td{
 					@include bnd((p:r));
@@ -174,7 +175,7 @@
 		@include trn((t:.2s));
 		&.primary{
 			@include bg((c:m));
-			@include txt((c:b));
+			@include txt((c:i));
 		}
 		&.secondary{
 			@include bdr((s:s,w:1));
